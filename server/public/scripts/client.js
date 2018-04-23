@@ -8,7 +8,18 @@ function onReady() {
     $('#subtractButton').on('click', addNew);
     $('#multiplyButton').on('click', addNew);
     $('#divideButton').on('click', addNew);
-    $('#clearButton').on( 'click', clearHistory);
+    $('#clearButton').on('click', clearHistory);
+}
+
+function clearHistory() {
+    $.ajax({
+        type: 'GET',
+        url: '/objects'
+    })
+        .then(function (response) {
+            console.log(response);
+            $('#historyList').children().remove();
+        });
 }
 
 function getAllHistory() {
@@ -23,9 +34,9 @@ function getAllHistory() {
                 $('#historyList').prepend(`<li>${response}</li>`);
             });
         });
-    }
+}
 
-function addNew(){
+function addNew() {
     const newObject = {
         x: $('#firstNumber').val(),
         y: $('#secondNumber').val(),
@@ -37,9 +48,8 @@ function addNew(){
         url: '/add-object',
         data: newObject
     })
-    .then(function (response) {
-        console.log(response);
-        getAllHistory();
-    });
+        .then(function (response) {
+            console.log(response);
+            getAllHistory();
+        });
 }
-
