@@ -13,6 +13,7 @@ function onReady() {
 
 function clearHistory() {
     $('input').val('');
+    $('#historyList').children().remove();
 }
 
 function getAllHistory() {
