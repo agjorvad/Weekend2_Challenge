@@ -12,14 +12,7 @@ function onReady() {
 }
 
 function clearHistory() {
-    $.ajax({
-        type: 'GET',
-        url: '/objects'
-    })
-        .then(function (response) {
-            console.log(response);
-            $('#historyList').children().remove();
-        });
+    $('input').val('');
 }
 
 function getAllHistory() {

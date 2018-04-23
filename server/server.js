@@ -13,6 +13,10 @@ app.get('/objects', (req, res) => {
     res.send(calculations.history);
 });
 
+app.delete('/objects', (req, res) => {
+    res.send(calculations.history.empty());
+});
+
 app.post('/add-object', (req, res) => {
     calculations.x = req.body.x;
     calculations.y = req.body.y;
