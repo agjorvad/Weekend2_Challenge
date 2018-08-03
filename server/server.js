@@ -15,7 +15,7 @@ app.get('/calculator', (req, res) => {
 
 app.delete('/delete-history', (req, res) => {
     console.log(req.body)
-   calculations.deleteHistory();
+    calculations.deleteHistory();
     res.sendStatus(200);
 });
 

@@ -1,0 +1,22 @@
+html {
+  background-color: rgb(46, 105, 139);
+}
+
+.calculatorDisplay {
+  margin-bottom: 5px;
+  height: 20px;
+  width: 160px;
+  background-color: white;
+}
+
+button, input {
+  background-color: #F0F8FF;
+  border: 1px solid black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+
+}

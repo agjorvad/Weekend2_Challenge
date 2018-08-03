@@ -11,21 +11,21 @@ class Calculator {
         if (this.type == '+') {
             this.result = Number(this.x) + Number(this.y);
         }
-        else if( this.type == '-') {
+        else if (this.type == '-') {
             this.result = Number(this.x) - Number(this.y);
         }
-        else if( this.type == '*') {
+        else if (this.type == '*') {
             this.result = Number(this.x) * Number(this.y);
         }
-        else if( this.type == '/') {
+        else if (this.type == '/') {
             this.result = Number(this.x) / Number(this.y);
         }
         this.history.push(`${this.x} ${this.type} ${this.y} = ${this.result}`)
     }
 
-deleteHistory() {
-    this.history=[];
-}
+    deleteHistory() {
+        this.history = [];
+    }
 }
 
 module.exports = Calculator
