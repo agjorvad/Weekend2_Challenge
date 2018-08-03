@@ -9,21 +9,23 @@ const PORT = 5000;
 app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/objects', (req, res) => {
+app.get('/calculator', (req, res) => {
     res.send(calculations.history);
 });
 
-app.delete('/objects', (req, res) => {
-    res.send(calculations.history.empty());
+app.delete('/delete-history', (req, res) => {
+    console.log(req.body)
+   calculations.deleteHistory();
+    res.sendStatus(200);
 });
 
-app.post('/add-object', (req, res) => {
+app.post('/calculator', (req, res) => {
+    console.log(req.body);
     calculations.x = req.body.x;
     calculations.y = req.body.y;
     calculations.type = req.body.type;
     console.log(calculations);
     calculations.compute();
-    console.log(calculations);
     res.sendStatus(200);
 });
 

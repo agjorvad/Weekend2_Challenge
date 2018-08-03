@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,13 +11,137 @@
 </head>
 <body>
     <h1>Calculator</h1>
-    <input id="firstNumber" type="text" Placeholder="First Number" />
-    <input id="secondNumber" type="text" Placeholder="Second Number" />
-    <button id="addButton" value="+">+</button>
-    <button id="subtractButton" value="-">-</button>
-    <button id="multiplyButton" value="*">*</button>
-    <button id="divideButton" value="/">/</button>
-    <button id="clearButton" type="reset">Clear</button>
-    <ul id="historyList"></ul>
-</body>
+    <body>
+        <!-- <input type="number" name="firstValue" id="firstValue" />
+        <input type="number" name="secondValue" id="secondValue" /> -->
+        <!-- <table>
+          <thead>
+            <tr>
+              <td colspan="4">
+                <input type="number" name="numField" id="numField" placeholder="0" disabled="disabled">
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <button class="btnNum">7</button>
+              </td>
+              <td>
+                <button class="btnNum">8</button>
+              </td>
+              <td>
+                <button class="btnNum">9</button>
+              </td>
+              <td>
+                <button id="btnDivide" class="operation" value="/">/</button>
+              </td>
+              <td>
+                <button id="clearButton" class="clear" value="clear">C</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="btnNum">4</button>
+              </td>
+              <td>
+                <button class="btnNum">5</button>
+              </td>
+              <td>
+                <button class="btnNum">6</button>
+              </td>
+              <td>
+                <button id="btnMultiply" class="operation" value="*">*</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="btnNum">1</button>
+              </td>
+              <td>
+                <button class="btnNum">2</button>
+              </td>
+              <td>
+                <button class="btnNum">3</button>
+              </td>
+              <td>
+                <button id="btnSubtract" class="operation" value="-">-</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="btnNum">.</button>
+              </td>
+              <td>
+                <button class="btnNum">0</button>
+              </td>
+              <td>
+                <button id="btnEqual">=</button>
+              </td>
+              <td>
+                <button id="btnAdd" class="operation" value="+">+</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="historyList"></div>
+        <button id="btnClearAll">Clear</button>
+      </body>
+      
+      </html> -->
+
+      <!DOCTYPE html>
+      <html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weekend Challenge 2</title>
+    <!-- <link rel="stylesheet" href="stylesheets/styles.css"> -->
+    <script src="vendors/jquery.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <div class="calculatorDisplay">
+
+    </div>
+    <form id="calculator">
+      <!-- NUMBER BUTTONS -->
+      <div class="numbers">
+        <div class="numbersTopRow btnGroup">
+          <button type="button" name="seven" class="number">7</button>
+          <button type="button" name="eight" class="number">8</button>
+          <button type="button" name="nine" class="number">9</button>
+        </div>
+        <div class="numbersMiddleRow btnGroup">
+          <button type="button" name="four" class="number">4</button>
+          <button type="button" name="five" class="number">5</button>
+          <button type="button" name="six" class="number">6</button>
+        </div>
+        <div class="numbersBottomRow btnGroup">
+          <button type="button" name="one" class="number">1</button>
+          <button type="button" name="two" class="number">2</button>
+          <button type="button" name="three" class="number">3</button>
+        </div>
+        <div class="numbersZeroRow btnGroup">
+          <div class="fakeButton"></div>
+          <button type="button" name="zero" class="number">0</button>
+          <div class="fakeButton"></div>
+        </div>
+      </div>
+      <!-- MATHEMATICAL OPERATOR BUTTONS -->
+      <div class="operators">
+        <button type="button" value="+" class="operator">+</button>
+        <button type="button" value="-" class="operator">-</button>
+        <button type="button" value="*" class="operator">*</button>
+        <button type="button" value="/" class="operator">/</button>
+      </div>
+      <input type="submit" value="Crunch the Numbers">
+      <input type="button" value="Clear" id="clear">
+    </form>
+    <h3>History List:</h3>
+    <div id="historyList"></div>
+    <button id="btnDeleteHistory">Delete History</button>
+  </body>
 </html>
+

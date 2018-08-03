@@ -22,7 +22,12 @@ class Calculator {
         }
         this.history.push(`${this.x} ${this.type} ${this.y} = ${this.result}`)
     }
+
+deleteHistory() {
+    this.history=[];
 }
+}
+
 module.exports = Calculator
 
 // module.exports = function calculateOperations(newObject){
