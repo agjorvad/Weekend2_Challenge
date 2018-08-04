@@ -14,13 +14,11 @@ app.get('/calculator', (req, res) => {
 });
 
 app.delete('/delete-history', (req, res) => {
-    console.log(req.body)
     calculations.deleteHistory();
     res.sendStatus(200);
 });
 
 app.post('/calculator', (req, res) => {
-    console.log(req.body);
     calculations.x = req.body.x;
     calculations.y = req.body.y;
     calculations.type = req.body.type;

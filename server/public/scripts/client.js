@@ -42,7 +42,7 @@ function getAllHistory() {
 
 function addEventListeners() {
   // click handler for mathematical operator buttons
-  $('.operators').on('click', 'button', function() {
+  $('.operator').on('click', function() {
     if (x === "") { // require user to enter a number if none has been entered yet
       alert('Please enter a number before choosing a mathematical operator.');
     } else if (y === "") { // only if x has been entered, and y HAS NOT
@@ -68,7 +68,7 @@ function addEventListeners() {
   }); // END mathematical operators click handler
 
   // click handler for "Crunch the Numbers" button
-  $('#calculator').on('submit', function(e) {
+  $('#equal').on('click', function(e) {
     // prevent auto-refresh of the page
     e.preventDefault();
     // store numbers entered by the user and
@@ -83,7 +83,7 @@ function addEventListeners() {
   }); // END on.submit click handler
 
   // click handler for number buttons
-  $('.numbers').on('click', 'button', function() {
+  $('.number').on('click', function() {
     if (operator === undefined) { // string concatenation on x
       x += $(this).text();
       console.log('x', x);

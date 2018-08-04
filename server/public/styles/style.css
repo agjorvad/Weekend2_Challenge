@@ -9,7 +9,7 @@ html {
   background-color: white;
 }
 
-button, input {
+button {
   background-color: #F0F8FF;
   border: 1px solid black;
   padding: 15px 32px;
@@ -18,5 +18,8 @@ button, input {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+}
 
+#historyList, h3 {
+  color: #F0F8FF;
 }
